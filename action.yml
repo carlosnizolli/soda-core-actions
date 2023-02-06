@@ -1,0 +1,25 @@
+name: 'Soda Core'
+description: 'GitHub action to run soda core tests'
+branding:
+  color: 'blue'
+  icon: 'move'
+inputs:
+  data_source:
+    description: 'Data Source name'
+    required: true   
+    
+  configuration:
+    description: 'Configuration file'
+    required: true    
+ 
+  checks:
+    description: 'Checks file'
+    required: true    
+
+runs:
+  using: 'docker'
+  image: docker://nizolli/soda-core:v01
+  args:
+    - ${{ inputs.dataset }}
+    - ${{ inputs.configuration }}
+    - ${{ inputs.checks }}

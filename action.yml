@@ -20,6 +20,6 @@ runs:
   using: 'docker'
   image: docker://nizolli/sodacore:v01
   args:
-    - ${{ inputs.dataset }}
+    - ${{ inputs.data_source }}
     - ${{ inputs.configuration }}
     - ${{ inputs.checks }}

@@ -10,3 +10,6 @@
          data_source: datasource_name
          configuration: /configuration.yml
          checks:/ checks.yml
+         month: Dezembro
+         date1: 2022-12-01
+         date2: 2023-01-01

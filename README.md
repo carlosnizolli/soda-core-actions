@@ -1,6 +1,6 @@
 # soda-core-actions
 
-      uses: carlosnizolli/soda-core-actions:v01.2
+      uses: carlosnizolli/soda-core-actions:month
       env:
         POSTGRES_USERNAME: ${{ secrets.POSTGRES_USERNAME }}
         POSTGRES_PASSWORD: ${{ secrets.POSTGRES_PASSWORD }}

@@ -1,8 +1,9 @@
 name: 'Soda Core'
-description: 'GitHub action to run soda core tests'
+description: 'Run Soda Core Scan'
 branding:
-  color: 'blue'
-  icon: 'move'
+  icon: 'check-square'  
+  color: 'green'
+
 inputs:
   data_source:
     description: 'Data Source name'
@@ -16,10 +17,40 @@ inputs:
     description: 'Checks file'
     required: true    
 
+  month:
+    description: 'Month'
+    required: false   
+    
+  date1:
+    description: 'date1'
+    required: false    
+ 
+  date2:
+    description: 'date2'
+    required: false    
+
+  user:
+    description: 'db user'
+    required: false    
+ 
+  password:
+    description: 'db password'
+    required: false   
+
+  query:
+    description: 'query total'
+    required: false   
+
 runs:
-  using: 'docker'
-  image: docker://nizolli/sodacore:v01.4
+  using: "docker"
+  image: docker://nizolli/sodaqa-month:v01
   args:
     - ${{ inputs.data_source }}
     - ${{ inputs.configuration }}
     - ${{ inputs.checks }}
+    - ${{ inputs.month }}
+    - ${{ inputs.date1 }}
+    - ${{ inputs.date2 }}    
+    - ${{ inputs.user }}
+    - ${{ inputs.password }}        
+    - ${{ inputs.query }}

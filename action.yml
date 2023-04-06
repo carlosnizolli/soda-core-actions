@@ -41,6 +41,15 @@ inputs:
     description: 'query total'
     required: false   
 
+  db_host:
+    description: 'db host'
+    required: false   
+
+  database:
+    description: 'db name'
+    required: false   
+
+
 runs:
   using: "docker"
   image: docker://nizolli/sodaqa-month:v01
@@ -54,3 +63,5 @@ runs:
     - ${{ inputs.user }}
     - ${{ inputs.password }}        
     - ${{ inputs.query }}
+    - ${{ inputs.db_host }}        
+    - ${{ inputs.database }}    

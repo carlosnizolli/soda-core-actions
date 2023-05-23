@@ -18,7 +18,7 @@ inputs:
 
 runs:
   using: 'docker'
-  image: docker://nizolli/sodacore:v01.4
+  image: docker://nizolli/sodacore:v01.5
   args:
     - ${{ inputs.data_source }}
     - ${{ inputs.configuration }}
